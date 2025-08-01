@@ -626,11 +626,6 @@ public class SessionEventArgs : SessionEventArgsBase
 
     ~SessionEventArgs()
     {
-#if DEBUG
-            // Finalizer should not be called
-            System.Diagnostics.Debugger.Break();
-#endif
-
         Dispose(false);
     }
 }

@@ -184,11 +184,6 @@ public abstract class SessionEventArgsBase : ProxyEventArgsBase, IDisposable
 
     ~SessionEventArgsBase()
     {
-#if DEBUG
-            // Finalizer should not be called
-            System.Diagnostics.Debugger.Break();
-#endif
-
         Dispose(false);
     }
 
