@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Serilog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -521,7 +522,7 @@ public partial class ProxyServer : IDisposable
         }
 
         if (protocolType != ProxyProtocolType.None)
-            Console.WriteLine("Set endpoint at Ip {0} and port: {1} as System {2} Proxy", endPoint.IpAddress,
+            Log.Information("Set endpoint at Ip {0} and port: {1} as System {2} Proxy", endPoint.IpAddress,
                 endPoint.Port, proxyType);
     }
 
